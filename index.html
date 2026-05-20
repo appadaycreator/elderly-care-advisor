@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>介護施設・費用診断 - 親の介護に最適な施設と費用を無料診断</title>
+<meta name="description" content="5つの質問で親御さんに最適な介護施設タイプと月額費用の目安を診断。要介護度・予算・立地から最適なケアプランを提案します。">
+<meta property="og:title" content="介護施設・費用診断 | 親の介護に最適なプランを無料診断">
+<meta property="og:description" content="要介護度・予算・希望から最適な介護施設タイプと費用目安を診断。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://appadaycreator.github.io/elderly-care-advisor/">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 50%, #c4b5fd 100%); min-height: 100vh; }
+  .card { background: white; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.09); }
+  .btn-primary { background: #7c3aed; color: white; border: none; border-radius: 0.75rem; padding: 0.875rem 2rem; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: all 0.2s; width: 100%; display: block; }
+  .btn-primary:hover { background: #6d28d9; transform: translateY(-1px); }
+  .option-btn { border: 2px solid #e5e7eb; border-radius: 0.75rem; padding: 0.875rem 1rem; cursor: pointer; transition: all 0.2s; background: white; width: 100%; text-align: left; margin-bottom: 0.625rem; font-size: 0.95rem; }
+  .option-btn:hover, .option-btn.selected { border-color: #7c3aed; background: #f5f3ff; font-weight: 600; }
+  .screen { display: none; }
+  .screen.active { display: block; }
+  .progress-track { background: #ddd6fe; border-radius: 9999px; height: 8px; }
+  .progress-bar { background: #7c3aed; height: 8px; border-radius: 9999px; transition: width 0.4s ease; }
+</style>
+</head>
+<body class="font-sans">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="max-w-lg mx-auto px-4 py-10">
+
+  <div id="screen-intro" class="screen active">
+    <div class="text-center mb-8">
+      <div class="text-6xl mb-4">🏥</div>
+      <h1 class="text-2xl font-bold text-gray-800 mb-2">介護施設・費用診断</h1>
+      <p class="text-gray-600 text-sm">5つの質問で親御さんに最適な<br>介護施設タイプと月額費用を診断</p>
+    </div>
+    <div class="card p-6 mb-6 space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="text-2xl">🏠</div>
+        <div><div class="font-bold text-gray-800 text-sm">施設タイプ診断</div><div class="text-purple-600 text-sm">特養・老健・グループホーム等を提案</div></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-2xl">💴</div>
+        <div><div class="font-bold text-gray-800 text-sm">月額費用の目安</div><div class="text-gray-600 text-sm">介護保険適用後の自己負担額を試算</div></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-2xl">📋</div>
+        <div><div class="font-bold text-gray-800 text-sm">準備チェックリスト</div><div class="text-gray-600 text-sm">手続きの優先順位もアドバイス</div></div>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="startDiagnosis()">介護施設を診断する →</button>
+    <p class="text-center text-xs text-gray-500 mt-3">個人情報は一切収集しません</p>
+  </div>
+
+  <div id="screen-questions" class="screen">
+    <div class="mb-6">
+      <div class="flex justify-between text-xs text-gray-500 mb-1">
+        <span id="q-label">質問 1 / 5</span>
+        <span id="q-pct">20%</span>
+      </div>
+      <div class="progress-track"><div class="progress-bar" id="prog" style="width:20%"></div></div>
+    </div>
+    <div class="card p-6">
+      <h2 class="text-lg font-bold text-gray-800 mb-5" id="q-text"></h2>
+      <div id="opts"></div>
+    </div>
+  </div>
+
+  <div id="screen-loading" class="screen text-center py-20">
+    <div class="text-5xl mb-4">🏥</div>
+    <div class="text-gray-700 font-bold text-lg mb-2">診断中...</div>
+    <div class="text-gray-500 text-sm">最適な介護プランを分析しています</div>
+  </div>
+
+  <div id="screen-results" class="screen">
+    <div class="text-center mb-6">
+      <div class="text-5xl mb-3">📋</div>
+      <h2 class="text-2xl font-bold text-gray-800">診断結果</h2>
+    </div>
+    <div class="card p-6 mb-4">
+      <h3 class="font-bold text-purple-700 text-lg mb-1" id="res-type">特別養護老人ホーム（特養）</h3>
+      <p class="text-sm text-gray-600 mb-3" id="res-desc"></p>
+      <div class="bg-purple-50 rounded-lg p-3 mb-3">
+        <div class="text-xs text-gray-500 mb-1">月額費用目安（自己負担）</div>
+        <div class="text-2xl font-bold text-purple-600" id="res-cost"></div>
+      </div>
+      <div class="text-sm text-gray-600" id="res-detail"></div>
+    </div>
+    <div class="card p-6 mb-4">
+      <h3 class="font-bold text-gray-800 mb-3">📞 介護施設の無料相談</h3>
+      <div class="bg-purple-50 border border-purple-200 rounded-xl p-4 mb-3">
+        <div class="font-bold text-purple-800 mb-1">介護施設の選び方を専門家に相談</div>
+        <p class="text-xs text-gray-600 mb-3">入居条件・待機期間・費用について無料でアドバイス。地域の施設情報も提供。</p>
+        <a href="A8_ELDERLY_CARE_URL_PLACEHOLDER" target="_blank" rel="noopener sponsored" class="block text-center bg-purple-600 text-white font-bold py-3 rounded-lg text-sm hover:bg-purple-700 transition">無料で介護相談する →</a>
+      </div>
+    </div>
+    <div class="card p-4 mb-4 bg-blue-50 border border-blue-200">
+      <p class="text-xs text-blue-800">💡 <strong>介護保険</strong>の申請がまだの場合は、まず市区町村の窓口で要介護認定の申請をおすすめします</p>
+    </div>
+    <button class="btn-primary" style="background:#6b7280;" onclick="restart()">もう一度診断する</button>
+  </div>
+
+</div>
+
+<script>
+var Qs = [
+  { text:"対象者の現在の状況は？", opts:["自立（元気）","少し介助が必要","要支援1〜2","要介護1〜2","要介護3〜5（重度）"], key:"level" },
+  { text:"認知症の状況は？", opts:["なし・軽度の物忘れ","軽度（日常は自立）","中程度（見守り必要）","重度（常時介護必要）"], key:"dementia" },
+  { text:"居住エリアは？", opts:["都市部（東京・大阪・名古屋等）","地方都市","郊外・農村部"], key:"area" },
+  { text:"月に使える介護費用（自己負担）は？", opts:["5万円未満","5〜10万円","10〜20万円","20万円以上"], key:"budget" },
+  { text:"最も重視することは？", opts:["費用を抑えたい","自宅に近い施設","医療ケアの充実","レクリエーション等の充実"], key:"priority" }
+];
+var cur=0,ans={};
+
+var facilityMap = {
+  "low-low": { type:"デイサービス（通所介護）", desc:"自宅で生活しながら日中だけ施設を利用。介護の負担を軽減しつつ自宅での生活を継続できます。", cost:"月2〜5万円", detail:"要支援・要介護1〜2に最適。送迎付きで安心。週2〜5回の利用が一般的。" },
+  "low-high": { type:"グループホーム（認知症対応）", desc:"少人数（5〜9名）で共同生活する施設。認知症の方に最も適した環境です。", cost:"月13〜18万円", detail:"認知症の進行を穏やかにする効果が期待できます。定員が少ないため早めの申し込みを。" },
+  "high-low": { type:"介護老人保健施設（老健）", desc:"医療ケアを受けながら在宅復帰を目指すリハビリ施設。医師・看護師が常駐。", cost:"月8〜15万円", detail:"退院後の自宅復帰を目指す方に最適。3〜6ヶ月の利用が一般的。" },
+  "high-high": { type:"特別養護老人ホーム（特養）", desc:"要介護3以上が入居できる公的施設。24時間介護体制で費用が比較的安い。", cost:"月6〜15万円", detail:"要介護3以上が対象。待機者が多いため早めに申し込みを。介護保険で費用を大幅に抑えられます。" }
+};
+
+function startDiagnosis() { show('questions'); renderQ(); }
+
+function show(name) {
+  document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById('screen-'+name).classList.add('active');
+}
+
+function renderQ() {
+  var q = Qs[cur];
+  var pct = Math.round((cur+1)/Qs.length*100);
+  document.getElementById('q-label').textContent='質問 '+(cur+1)+' / '+Qs.length;
+  document.getElementById('q-pct').textContent=pct+'%';
+  document.getElementById('prog').style.width=pct+'%';
+  document.getElementById('q-text').textContent=q.text;
+  var c=document.getElementById('opts'); c.innerHTML='';
+  q.opts.forEach(function(opt,i){
+    var b=document.createElement('button');
+    b.className='option-btn'; b.textContent=opt;
+    b.onclick=function(){ pick(i,opt,q.key); };
+    c.appendChild(b);
+  });
+}
+
+function pick(i,val,key) {
+  ans[key]={i:i,val:val};
+  document.querySelectorAll('.option-btn').forEach(function(b,j){ b.classList.toggle('selected',j===i); });
+  setTimeout(function(){
+    cur++;
+    if(cur<Qs.length){ renderQ(); } else { show('loading'); setTimeout(showResults,1600); }
+  },300);
+}
+
+function showResults() {
+  var levelIdx = ans.level ? ans.level.i : 2;
+  var dementiaIdx = ans.dementia ? ans.dementia.i : 0;
+  var isHeavy = levelIdx >= 3;
+  var hasDementia = dementiaIdx >= 2;
+  var key = (isHeavy?'high':'low')+'-'+(hasDementia?'high':'low');
+  var facility = facilityMap[key] || facilityMap['high-low'];
+  document.getElementById('res-type').textContent = facility.type;
+  document.getElementById('res-desc').textContent = facility.desc;
+  document.getElementById('res-cost').textContent = facility.cost;
+  document.getElementById('res-detail').textContent = facility.detail;
+  show('results');
+}
+
+function restart() { cur=0; ans={}; show('intro'); }
+</script>
+</body>
+</html>
