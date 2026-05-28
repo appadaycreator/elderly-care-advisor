@@ -4,7 +4,7 @@
   "description": "親の介護費用を無料診断。施設選びガイド付き",
   "start_url": "/elderly-care-advisor/",
   "display": "standalone",
-  "background_color": "#f8f7ff",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "lang": "ja",
   "icons": [
