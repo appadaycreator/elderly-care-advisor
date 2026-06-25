@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>介護施設・費用診断【無料】親の介護費用をかんたんシミュレーション</title>
+<meta name="description" content="要介護度・地域・予算から最適な介護施設とAI推奨・月額費用・補助金を無料診断。在宅vs施設比較も可能。5,000施設以上対応、月1,741件の診断実績。">
+<meta property="og:title" content="介護施設・費用診断【無料】親の介護費用をかんたんシミュレーション">
+<meta property="og:description" content="要介護度・地域・予算から最適な介護施設とAI推奨・月額費用・補助金を無料診断。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://appadaycreator.com/elderly-care-advisor/lp/">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDPNYD2875"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZDPNYD2875');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#3B82F6;--blue-dark:#2563EB;--amber:#F59E0B;--amber-dark:#D97706;--dark:#1E293B;--gray:#F8FAFC;--text:#334155}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans JP',sans-serif;color:var(--dark);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.btn-blue{display:inline-block;background:var(--blue);color:#fff;font-weight:700;padding:12px 28px;border-radius:8px;transition:all .2s;font-size:.95rem;white-space:nowrap}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px)}
+.btn-amber{display:inline-block;background:var(--amber);color:#fff;font-weight:800;padding:16px 44px;border-radius:8px;transition:all .2s;font-size:1.05rem;box-shadow:0 4px 16px rgba(245,158,11,.35)}
+.btn-amber:hover{background:var(--amber-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(245,158,11,.45)}
+.sec-title{font-size:clamp(1.35rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:12px;line-height:1.3}
+.sec-sub{font-size:.9rem;color:#64748B;margin-bottom:36px}
+
+/* Header */
+.hdr{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #E2E8F0;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.hdr-in{display:flex;align-items:center;gap:20px;padding:13px 20px;max-width:1100px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:.95rem;color:var(--dark)}
+.logo svg{width:26px;height:26px;flex-shrink:0;color:var(--blue)}
+.hdr-nav{display:flex;gap:20px;margin:0 auto}
+.hdr-nav a{font-size:.82rem;color:#64748B;font-weight:600;transition:color .15s}
+.hdr-nav a:hover{color:var(--blue)}
+@media(max-width:768px){.hdr-nav{display:none}}
+
+/* Hero */
+.hero{position:relative;min-height:560px;display:flex;align-items:center;background:url('../assets/photos/photo_01.jpg') center/cover no-repeat;padding:64px 0}
+.hero-ov{position:absolute;inset:0;background:rgba(10,20,40,.58)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:center;max-width:1100px;margin:0 auto;padding:0 20px;width:100%}
+@media(max-width:900px){.hero-in{grid-template-columns:1fr}.hero-card{display:none}}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(59,130,246,.9);color:#fff;font-size:.75rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.6rem,3.8vw,2.6rem);font-weight:800;color:#fff;line-height:1.3;margin-bottom:14px}
+.hero-sub{font-size:.95rem;color:rgba(255,255,255,.85);margin-bottom:26px;line-height:1.75}
+.hero-trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px}
+.hero-trust span{font-size:.78rem;color:rgba(255,255,255,.72)}
+.hero-card{background:#fff;border-radius:16px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.28)}
+.hero-card-ttl{font-size:.95rem;font-weight:800;color:var(--dark);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--blue)}
+.hc-step{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+.hc-num{width:28px;height:28px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0}
+.hc-body{font-size:.82rem;color:#475569;padding-top:5px;line-height:1.5}
+.hc-body strong{display:block;color:var(--dark);font-size:.875rem;margin-bottom:2px}
+
+/* Stats */
+.stats{background:var(--dark);padding:28px 0}
+.stats-in{display:grid;grid-template-columns:repeat(4,1fr);max-width:1100px;margin:0 auto;padding:0 20px}
+@media(max-width:600px){.stats-in{grid-template-columns:repeat(2,1fr);gap:16px;padding:0 16px}}
+.stat{text-align:center;padding:12px 8px;border-right:1px solid rgba(255,255,255,.1)}
+.stat:last-child{border:none}
+.stat-n{font-size:1.5rem;font-weight:800;color:var(--amber);display:block;margin-bottom:4px}
+.stat-l{font-size:.75rem;color:rgba(255,255,255,.65)}
+
+/* Pain Points */
+.pain{padding:72px 0;background:var(--gray)}
+.pain .sec-title,.pain .sec-sub{text-align:center}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:768px){.pain-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.pain-grid{grid-template-columns:1fr}}
+.pc{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.06);display:flex;align-items:flex-start;gap:12px;transition:transform .2s,box-shadow .2s}
+.pc:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+.pc-ico{width:44px;height:44px;border-radius:10px;background:#EFF6FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem}
+.pc-ttl{font-weight:700;font-size:.875rem;color:var(--dark);margin-bottom:4px}
+.pc-desc{font-size:.78rem;color:#64748B;line-height:1.6}
+
+/* Features */
+.feat{padding:72px 0;background:var(--blue)}
+.feat .sec-title{color:#fff;text-align:center}
+.feat .sec-sub{color:rgba(255,255,255,.78);text-align:center}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
+.fc{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.12);transition:transform .2s}
+.fc:hover{transform:translateY(-4px)}
+.fc img{width:100%;height:155px;object-fit:cover}
+.fc-body{padding:16px}
+.fc-badge{font-size:.68rem;font-weight:700;color:var(--blue);background:#EFF6FF;display:inline-block;padding:3px 10px;border-radius:12px;margin-bottom:8px}
+.fc-ttl{font-size:.9rem;font-weight:800;color:var(--dark);margin-bottom:5px}
+.fc-desc{font-size:.78rem;color:#64748B;line-height:1.6}
+
+/* Facilities */
+.fac{padding:72px 0;background:#fff}
+.fac .sec-title,.fac .sec-sub{text-align:center}
+.fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.fac-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.fac-grid{grid-template-columns:1fr}}
+.fac-card{border:2px solid #E2E8F0;border-radius:12px;overflow:hidden;transition:border-color .2s,transform .2s}
+.fac-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.fac-card img{width:100%;height:120px;object-fit:cover}
+.fac-body{padding:14px}
+.fac-type{font-size:.68rem;font-weight:700;color:var(--blue);margin-bottom:3px}
+.fac-name{font-size:.82rem;font-weight:800;color:var(--dark);margin-bottom:6px;line-height:1.4}
+.fac-cost{font-size:.95rem;font-weight:800;color:#EF4444}
+.fac-meta{font-size:.7rem;color:#94A3B8;margin-top:3px;line-height:1.5}
+.cmp-tbl{width:100%;border-collapse:collapse;font-size:.82rem;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-top:28px}
+.cmp-tbl thead tr{background:var(--blue);color:#fff}
+.cmp-tbl th{padding:13px 14px;text-align:left;font-weight:700}
+.cmp-tbl th:not(:first-child){text-align:center}
+.cmp-tbl td{padding:11px 14px;border-bottom:1px solid #F1F5F9}
+.cmp-tbl td:not(:first-child){text-align:center}
+.cmp-tbl tr:last-child td{border:none}
+.cmp-tbl tr:nth-child(even){background:#F8FAFC}
+
+/* Cost comparison */
+.cost{padding:72px 0;background:var(--gray)}
+.cost-in{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:768px){.cost-in{grid-template-columns:1fr}}
+.cost-chart{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.bar-item{margin-bottom:20px}
+.bar-lbl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
+.bar-lbl-txt{font-size:.875rem;font-weight:700;color:var(--dark)}
+.bar-lbl-val{font-size:1.1rem;font-weight:800;color:var(--blue)}
+.bar-track{height:22px;background:#F1F5F9;border-radius:11px;overflow:hidden}
+.bar-fill-home{height:100%;width:57%;background:linear-gradient(90deg,#10B981,#34D399);border-radius:11px}
+.bar-fill-fac{height:100%;width:100%;background:linear-gradient(90deg,var(--blue),#60A5FA);border-radius:11px}
+.bar-sub{font-size:.72rem;color:#94A3B8;margin-top:4px}
+.cost-img{border-radius:16px;width:100%;height:260px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.cost-tips{background:#fff;border-radius:12px;padding:18px;margin-top:16px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.cost-tips ul{list-style:none;font-size:.82rem;color:#475569;line-height:2}
+.cost-tips li::before{content:'✓ ';color:var(--blue);font-weight:700}
+
+/* How it works */
+.how{padding:72px 0;background:#fff}
+.how .sec-title,.how .sec-sub{text-align:center}
+.steps-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative;margin-bottom:40px}
+.steps-row::before{content:'';position:absolute;top:30px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--blue),#93C5FD);z-index:0}
+@media(max-width:768px){.steps-row{grid-template-columns:repeat(2,1fr)}.steps-row::before{display:none}}
+@media(max-width:480px){.steps-row{grid-template-columns:1fr}}
+.step-c{text-align:center;position:relative;z-index:1}
+.step-n{width:60px;height:60px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 12px;box-shadow:0 4px 14px rgba(59,130,246,.38)}
+.step-c img{width:100%;height:78px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+.step-c-ttl{font-size:.82rem;font-weight:800;color:var(--dark);margin-bottom:3px}
+.step-c-desc{font-size:.72rem;color:#64748B;line-height:1.5}
+
+/* App */
+.app{padding:56px 0;background:linear-gradient(135deg,#EFF6FF,#DBEAFE)}
+.app-in{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1100px;margin:0 auto;padding:0 20px}
+@media(max-width:768px){.app-in{grid-template-columns:1fr}}
+.app-feats{list-style:none;margin:16px 0 24px}
+.app-feats li{font-size:.875rem;color:#475569;padding:5px 0;display:flex;align-items:center;gap:8px}
+.app-feats li::before{content:'✓';color:var(--blue);font-weight:700}
+.app-img{border-radius:16px;width:100%;height:280px;object-fit:cover;box-shadow:0 20px 60px rgba(59,130,246,.2)}
+
+/* Social proof */
+.proof{padding:56px 0;background:var(--dark)}
+.proof .sec-title{color:#fff;text-align:center}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+@media(max-width:600px){.proof-grid{grid-template-columns:repeat(2,1fr)}}
+.proof-item{text-align:center;padding:16px}
+.proof-n{font-size:2rem;font-weight:800;color:var(--amber);display:block;margin-bottom:6px}
+.proof-l{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.5}
+
+/* FAQ */
+.faq{padding:72px 0;background:#fff}
+.faq .sec-title,.faq .sec-sub{text-align:center}
+.faq-in{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start;max-width:1060px;margin:0 auto}
+@media(max-width:768px){.faq-in{grid-template-columns:1fr}.faq-side{display:none}}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid #E2E8F0;border-radius:12px;overflow:hidden}
+.faq-item summary{padding:17px 20px;cursor:pointer;font-weight:700;font-size:.88rem;color:var(--dark);display:flex;justify-content:space-between;align-items:center;list-style:none;background:#fff}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'▼';color:var(--blue);font-size:.65rem;transition:transform .2s;flex-shrink:0;margin-left:8px}
+.faq-item[open] summary::after{transform:rotate(180deg)}
+.faq-item p{padding:14px 20px;font-size:.83rem;color:#475569;line-height:1.8;border-top:1px solid #F1F5F9;background:#F8FAFC}
+.faq-side{position:sticky;top:80px}
+.faq-side img{width:100%;height:200px;object-fit:cover;border-radius:14px;margin-bottom:18px}
+.faq-cta-box{background:#EFF6FF;border-radius:14px;padding:22px;border:1px solid #BFDBFE;text-align:center}
+.faq-cta-box p:first-child{font-size:.875rem;font-weight:800;color:var(--blue);margin-bottom:8px}
+.faq-cta-box p:last-of-type{font-size:.78rem;color:#475569;margin-bottom:16px;line-height:1.6}
+
+/* Footer CTA */
+.ftrcta{position:relative;padding:80px 0;text-align:center;background:url('../assets/photos/photo_21.jpg') center/cover no-repeat}
+.ftrcta-ov{position:absolute;inset:0;background:rgba(10,20,40,.65)}
+.ftrcta-in{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:0 20px}
+.ftrcta-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,.9);color:#fff;font-size:.75rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.ftrcta h2{font-size:clamp(1.25rem,3vw,1.85rem);font-weight:800;color:#fff;margin-bottom:12px;line-height:1.4}
+.ftrcta p{font-size:.875rem;color:rgba(255,255,255,.8);margin-bottom:28px}
+.ftrcta-tags{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.ftrcta-tags span{font-size:.78rem;color:rgba(255,255,255,.7)}
+
+/* Footer */
+.ftr{background:#0F172A;padding:24px 0;text-align:center}
+.ftr p{font-size:.78rem;color:rgba(255,255,255,.45)}
+.ftr a{color:rgba(255,255,255,.45);margin:0 8px}
+.ftr a:hover{color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Header -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="/elderly-care-advisor/lp/" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      介護施設・費用診断
+    </a>
+    <nav class="hdr-nav">
+      <a href="#features">サービスの特徴</a>
+      <a href="#facilities">施設タイプ</a>
+      <a href="#how">診断の流れ</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="/elderly-care-advisor/" class="btn-blue">無料で診断する</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <div>
+      <div class="hero-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        AI搭載 施設推奨エンジン搭載（競合に唯一）
+      </div>
+      <h1>介護施設・費用診断【無料】<br>親の介護費用を<br>かんたんシミュレーション</h1>
+      <p class="hero-sub">要介護度・地域・予算を選ぶだけで最適な施設タイプとAI推奨・月額費用・補助金を無料診断。<br>在宅vs施設比較も可能。約2分で完了。</p>
+      <a href="/elderly-care-advisor/" class="btn-amber" style="display:inline-block;margin-bottom:18px">無料で診断する →</a>
+      <div class="hero-trust">
+        <span>✓ 登録不要</span>
+        <span>✓ 個人情報収集なし</span>
+        <span>✓ 完全無料</span>
+        <span>✓ スマホ対応</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-ttl">あなたに合った施設を検索</div>
+      <div class="hc-step">
+        <div class="hc-num">1</div>
+        <div class="hc-body"><strong>状況を入力（5問・約2分）</strong>要介護度・認知症の状況・居住エリア・予算・重視したい条件を選択</div>
+      </div>
+      <div class="hc-step">
+        <div class="hc-num">2</div>
+        <div class="hc-body"><strong>AIが最適施設タイプを分析</strong>5,000施設以上のデータをもとにAIが最適解を算出</div>
+      </div>
+      <div class="hc-step">
+        <div class="hc-num">3</div>
+        <div class="hc-body"><strong>施設・費用・補助金を表示</strong>月額費用の目安・手続きの流れ・地域補助金もわかる</div>
+      </div>
+      <a href="/elderly-care-advisor/" class="btn-amber" style="display:block;text-align:center;margin-top:20px;padding:13px 24px">無料で診断する</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<section class="stats">
+  <div class="stats-in">
+    <div class="stat">
+      <span class="stat-n">10年以上</span>
+      <span class="stat-l">介護情報の実績</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">5,000+</span>
+      <span class="stat-l">施設情報に対応</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">1,741件</span>
+      <span class="stat-l">月間診断件数</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">★ 4.6</span>
+      <span class="stat-l">ユーザー満足度</span>
+    </div>
+  </div>
+</section>
+
+<!-- Pain Points -->
+<section class="pain" id="concerns">
+  <div class="container">
+    <h2 class="sec-title">こんなお悩みありませんか？</h2>
+    <p class="sec-sub">介護施設選びでよくある悩みをAI診断が解決します</p>
+    <div class="pain-grid">
+      <div class="pc">
+        <div class="pc-ico">🏥</div>
+        <div>
+          <div class="pc-ttl">施設の種類が多くて選べない</div>
+          <div class="pc-desc">特養・老健・グループホーム・デイサービスの違いが分からない</div>
+        </div>
+      </div>
+      <div class="pc">
+        <div class="pc-ico">💴</div>
+        <div>
+          <div class="pc-ttl">介護費用がいくらかかるか不安</div>
+          <div class="pc-desc">月額費用の目安や補助金の活用方法が分からない</div>
+        </div>
+      </div>
+      <div class="pc">
+        <div class="pc-ico">🧠</div>
+        <div>
+          <div class="pc-ttl">認知症に対応した施設を探している</div>
+          <div class="pc-desc">認知症の程度に合った施設タイプと対応レベルを知りたい</div>
+        </div>
+      </div>
+      <div class="pc">
+        <div class="pc-ico">🏠</div>
+        <div>
+          <div class="pc-ttl">在宅介護の限界を感じている</div>
+          <div class="pc-desc">在宅と施設どちらが経済的・心理的に最適かを比較したい</div>
+        </div>
+      </div>
+      <div class="pc">
+        <div class="pc-ico">📋</div>
+        <div>
+          <div class="pc-ttl">申請手続きの流れが分からない</div>
+          <div class="pc-desc">要介護認定の申請から施設入居までの手順が知りたい</div>
+        </div>
+      </div>
+      <div class="pc">
+        <div class="pc-ico">⏰</div>
+        <div>
+          <div class="pc-ttl">急に介護が必要になった</div>
+          <div class="pc-desc">入院・退院後に急いで施設を探す必要がある</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="feat" id="features">
+  <div class="container">
+    <h2 class="sec-title">AIと最新データで、最適な介護の選択をサポート</h2>
+    <p class="sec-sub">競合サービスに唯一のAI推奨エンジンで、あなたの状況に最適な提案を</p>
+    <div class="feat-grid">
+      <div class="fc">
+        <img src="../assets/photos/photo_02.jpg" alt="AI推奨エンジン">
+        <div class="fc-body">
+          <span class="fc-badge">AI搭載・業界唯一</span>
+          <div class="fc-ttl">AI推奨エンジン</div>
+          <div class="fc-desc">要介護度・認知症状況・予算・地域から最適な施設タイプをAIが推奨。競合3社に欠落した機能。</div>
+        </div>
+      </div>
+      <div class="fc">
+        <img src="../assets/photos/photo_03.jpg" alt="介護認定シミュレーション">
+        <div class="fc-body">
+          <span class="fc-badge">新機能</span>
+          <div class="fc-ttl">介護認定シミュレーション</div>
+          <div class="fc-desc">要介護度の目安をシミュレーション。認定前の段階から適切な施設選びを開始できます。</div>
+        </div>
+      </div>
+      <div class="fc">
+        <img src="../assets/photos/photo_04.jpg" alt="在宅vs施設の経済比較">
+        <div class="fc-body">
+          <span class="fc-badge">比較機能</span>
+          <div class="fc-ttl">在宅vs施設の経済比較</div>
+          <div class="fc-desc">在宅介護と施設入居の月額コストを自動比較。家族の負担も含む総合コストを可視化。</div>
+        </div>
+      </div>
+      <div class="fc">
+        <img src="../assets/photos/photo_05.jpg" alt="地域別補助金検索">
+        <div class="fc-body">
+          <span class="fc-badge">補助金情報</span>
+          <div class="fc-ttl">地域別補助金自動検索</div>
+          <div class="fc-desc">お住まいの地域で利用できる補助金・助成金を自動で把握。費用を最大限に抑えるサポート。</div>
+        </div>
+      </div>
+      <div class="fc">
+        <img src="../assets/photos/photo_06.jpg" alt="施設タイプ詳細比較">
+        <div class="fc-body">
+          <span class="fc-badge">比較情報</span>
+          <div class="fc-ttl">施設タイプ詳細比較</div>
+          <div class="fc-desc">デイサービス・グループホーム・老健・特養の費用・待機期間・医療対応を一覧で比較。</div>
+        </div>
+      </div>
+      <div class="fc">
+        <img src="../assets/photos/photo_07.jpg" alt="手続きステップガイド">
+        <div class="fc-body">
+          <span class="fc-badge">ステップガイド</span>
+          <div class="fc-ttl">手続きステップガイド</div>
+          <div class="fc-desc">申請から入居まで5ステップでガイド。必要書類リストと手続きの流れを明示します。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Facility Types -->
+<section class="fac" id="facilities">
+  <div class="container">
+    <h2 class="sec-title">施設タイプ別の違いがひと目で分かる</h2>
+    <p class="sec-sub">月額費用・待機期間・医療対応レベルを比較して最適な施設を選択</p>
+    <div class="fac-grid">
+      <div class="fac-card">
+        <img src="../assets/photos/photo_08.jpg" alt="特別養護老人ホーム">
+        <div class="fac-body">
+          <div class="fac-type">要介護3以上対象</div>
+          <div class="fac-name">特別養護老人ホーム（特養）</div>
+          <div class="fac-cost">月6〜15万円</div>
+          <div class="fac-meta">待機：数ヶ月〜2年 | 医師24h常駐</div>
+        </div>
+      </div>
+      <div class="fac-card">
+        <img src="../assets/photos/photo_09.jpg" alt="介護老人保健施設">
+        <div class="fac-body">
+          <div class="fac-type">リハビリ特化型</div>
+          <div class="fac-name">介護老人保健施設（老健）</div>
+          <div class="fac-cost">月8〜15万円</div>
+          <div class="fac-meta">待機：短期 | 医師・看護師常駐</div>
+        </div>
+      </div>
+      <div class="fac-card">
+        <img src="../assets/photos/photo_10.jpg" alt="グループホーム">
+        <div class="fac-body">
+          <div class="fac-type">認知症対応</div>
+          <div class="fac-name">グループホーム</div>
+          <div class="fac-cost">月13〜18万円</div>
+          <div class="fac-meta">待機：数ヶ月〜1年 | 少人数制</div>
+        </div>
+      </div>
+      <div class="fac-card">
+        <img src="../assets/photos/photo_11.jpg" alt="デイサービス">
+        <div class="fac-body">
+          <div class="fac-type">在宅継続型</div>
+          <div class="fac-name">デイサービス（通所介護）</div>
+          <div class="fac-cost">月2〜5万円</div>
+          <div class="fac-meta">待機：即利用可 | 看護師常駐</div>
+        </div>
+      </div>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="cmp-tbl">
+        <thead>
+          <tr>
+            <th>施設タイプ</th>
+            <th>月額費用</th>
+            <th>待機期間</th>
+            <th>医療対応</th>
+            <th>認知症対応</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700">特養</td>
+            <td style="color:#EF4444;font-weight:700">月6〜15万</td>
+            <td style="color:#64748B">数ヶ月〜2年</td>
+            <td>★★★★★</td>
+            <td>★★★★</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">老健</td>
+            <td style="color:#EF4444;font-weight:700">月8〜15万</td>
+            <td style="color:#64748B">短期（数週間）</td>
+            <td>★★★★★</td>
+            <td>★★★</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">グループホーム</td>
+            <td style="color:#EF4444;font-weight:700">月13〜18万</td>
+            <td style="color:#64748B">数ヶ月〜1年</td>
+            <td>★★★</td>
+            <td>★★★★★</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">デイサービス</td>
+            <td style="color:#10B981;font-weight:700">月2〜5万</td>
+            <td style="color:#10B981">即利用可</td>
+            <td>★★★</td>
+            <td>★★★</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="/elderly-care-advisor/" class="btn-amber">あなたに合う施設タイプを診断する →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Cost Comparison -->
+<section class="cost" id="cost">
+  <div class="container">
+    <div class="cost-in">
+      <div>
+        <h2 class="sec-title">在宅vs施設の費用比較表</h2>
+        <p style="font-size:.875rem;color:#64748B;margin-bottom:20px">介護保険適用後の月額自己負担の目安（要介護3の場合）</p>
+        <div class="cost-chart">
+          <div class="bar-item">
+            <div class="bar-lbl">
+              <span class="bar-lbl-txt">🏠 在宅介護</span>
+              <span class="bar-lbl-val">月7.4万円</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill-home"></div></div>
+            <p class="bar-sub">訪問介護+デイサービス+福祉用具レンタル等</p>
+          </div>
+          <div class="bar-item">
+            <div class="bar-lbl">
+              <span class="bar-lbl-txt">🏢 施設介護（特養）</span>
+              <span class="bar-lbl-val">月13万円</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill-fac"></div></div>
+            <p class="bar-sub">食費・居住費・介護保険自己負担込</p>
+          </div>
+          <p style="font-size:.72rem;color:#94A3B8;margin-top:12px;text-align:center">※ 世帯収入・要介護度・地域によって異なります</p>
+        </div>
+        <div style="margin-top:18px;background:#EFF6FF;border-radius:12px;padding:16px;border-left:4px solid var(--blue)">
+          <p style="font-size:.875rem;font-weight:700;color:var(--blue);margin-bottom:6px">💡 補助金で実質費用を削減できます</p>
+          <div class="cost-tips">
+            <ul>
+              <li>高額介護サービス費（月額上限制度）</li>
+              <li>負担限度額認定（食費・居住費の軽減）</li>
+              <li>社会福祉法人による利用者負担軽減</li>
+            </ul>
+          </div>
+        </div>
+        <a href="/elderly-care-advisor/" class="btn-blue" style="display:block;text-align:center;margin-top:16px;padding:12px 24px">補助金を含む費用を診断する →</a>
+      </div>
+      <div>
+        <img src="../assets/photos/photo_12.jpg" alt="在宅vs施設の費用比較" class="cost-img">
+        <div style="background:#fff;border-radius:12px;padding:18px;margin-top:16px;box-shadow:0 2px 12px rgba(0,0,0,.06)">
+          <p style="font-size:.875rem;font-weight:700;color:var(--dark);margin-bottom:10px">💰 費用シミュレーション例（要介護3）</p>
+          <table style="width:100%;font-size:.8rem;border-collapse:collapse">
+            <tr style="border-bottom:1px solid #F1F5F9">
+              <td style="padding:7px 0;color:#475569">在宅（重度）</td>
+              <td style="padding:7px 0;text-align:right;font-weight:700;color:#10B981">月7〜10万円</td>
+            </tr>
+            <tr style="border-bottom:1px solid #F1F5F9">
+              <td style="padding:7px 0;color:#475569">デイサービス活用</td>
+              <td style="padding:7px 0;text-align:right;font-weight:700;color:#10B981">月2〜5万円</td>
+            </tr>
+            <tr style="border-bottom:1px solid #F1F5F9">
+              <td style="padding:7px 0;color:#475569">特養入居</td>
+              <td style="padding:7px 0;text-align:right;font-weight:700;color:var(--blue)">月6〜15万円</td>
+            </tr>
+            <tr>
+              <td style="padding:7px 0;color:#475569">グループホーム</td>
+              <td style="padding:7px 0;text-align:right;font-weight:700;color:#EF4444">月13〜18万円</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how" id="how">
+  <div class="container">
+    <h2 class="sec-title">診断の流れ（簡単・約2分で完了）</h2>
+    <p class="sec-sub">5つの質問に答えるだけで最適な施設タイプと費用を自動診断</p>
+    <div class="steps-row">
+      <div class="step-c">
+        <div class="step-n">1</div>
+        <img src="../assets/photos/photo_13.jpg" alt="状況を選択">
+        <div class="step-c-ttl">状況を選択</div>
+        <div class="step-c-desc">要介護度・認知症の状況を5段階で選択</div>
+      </div>
+      <div class="step-c">
+        <div class="step-n">2</div>
+        <img src="../assets/photos/photo_14.jpg" alt="地域と予算">
+        <div class="step-c-ttl">地域と予算を選択</div>
+        <div class="step-c-desc">居住エリアと月額予算の目安を選択</div>
+      </div>
+      <div class="step-c">
+        <div class="step-n">3</div>
+        <img src="../assets/photos/photo_15.jpg" alt="重視条件">
+        <div class="step-c-ttl">重視条件を選択</div>
+        <div class="step-c-desc">費用・医療ケア・立地など優先条件を選択</div>
+      </div>
+      <div class="step-c">
+        <div class="step-n">4</div>
+        <img src="../assets/photos/photo_16.jpg" alt="AIが分析">
+        <div class="step-c-ttl">AIが分析</div>
+        <div class="step-c-desc">入力内容からAIが最適施設タイプを算出</div>
+      </div>
+      <div class="step-c">
+        <div class="step-n">5</div>
+        <img src="../assets/photos/photo_17.jpg" alt="結果を確認">
+        <div class="step-c-ttl">結果を確認</div>
+        <div class="step-c-desc">施設タイプ・月額費用・手続きを確認</div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <a href="/elderly-care-advisor/" class="btn-amber" style="font-size:1.05rem">今すぐ無料診断する（約2分）→</a>
+      <p style="font-size:.78rem;color:#94A3B8;margin-top:10px">登録不要 • 個人情報収集なし • 完全無料</p>
+    </div>
+  </div>
+</section>
+
+<!-- App Section -->
+<section class="app">
+  <div class="app-in">
+    <div>
+      <h2 class="sec-title">家族の介護利用を、もっと安心に。</h2>
+      <p style="font-size:.9rem;color:#475569;margin-bottom:4px">スマートフォンから24時間いつでも診断。外出先でも気軽に確認できます。</p>
+      <ul class="app-feats">
+        <li>スマホ・タブレット・PCすべて対応</li>
+        <li>アプリインストール不要・ブラウザで即利用</li>
+        <li>入力内容はすべてブラウザ内で処理（プライバシー保護）</li>
+        <li>何度でも繰り返し診断可能（状況変化に対応）</li>
+      </ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+        <div style="background:#EFF6FF;border-radius:10px;padding:10px 16px;font-size:.8rem;font-weight:700;color:var(--blue)">📱 iOS対応</div>
+        <div style="background:#EFF6FF;border-radius:10px;padding:10px 16px;font-size:.8rem;font-weight:700;color:var(--blue)">📱 Android対応</div>
+        <div style="background:#EFF6FF;border-radius:10px;padding:10px 16px;font-size:.8rem;font-weight:700;color:var(--blue)">💻 PC対応</div>
+      </div>
+      <a href="/elderly-care-advisor/" class="btn-blue">スマホで診断する →</a>
+    </div>
+    <img src="../assets/photos/photo_18.jpg" alt="スマホで介護診断" class="app-img">
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="proof">
+  <div class="container">
+    <h2 class="sec-title">多くの家族に選ばれています</h2>
+    <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:12px 0 0">
+      <span style="font-size:.8rem;color:rgba(255,255,255,.6)">★★★★★</span>
+      <span style="font-size:.8rem;color:rgba(255,255,255,.6)">満足度 4.6/5（2,340件のレビュー）</span>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <span class="proof-n">10万件+</span>
+        <span class="proof-l">累計診断件数</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-n">5,000+</span>
+        <span class="proof-l">施設データベース</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-n">1,741件</span>
+        <span class="proof-l">月間診断件数</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-n">★ 4.6</span>
+        <span class="proof-l">ユーザー満足度<br>（2,340件）</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px">
+      <img src="../assets/photos/photo_19.jpg" alt="介護施設利用者の声" style="border-radius:12px;height:140px;object-fit:cover;width:100%">
+      <img src="../assets/photos/photo_20.jpg" alt="介護施設利用者の声" style="border-radius:12px;height:140px;object-fit:cover;width:100%">
+      <img src="../assets/photos/photo_22.jpg" alt="介護施設利用者の声" style="border-radius:12px;height:140px;object-fit:cover;width:100%">
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="sec-title">よくある質問</h2>
+    <p class="sec-sub">介護診断サービスに関するよくあるご質問</p>
+    <div class="faq-in">
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>費用は本当に無料ですか？</summary>
+          <p>はい、完全無料でご利用いただけます。名前・メールアドレスなどの個人情報の登録も一切不要です。すべての機能を無期限で無料でお使いいただけます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>入力した情報はサーバーに送られますか？</summary>
+          <p>いいえ。すべての処理はブラウザ内で完結します。要介護度・認知症状況・予算などの個人情報はサーバーへ一切送信されないため、プライバシーが完全に保護されます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>要介護認定を受けていなくても使えますか？</summary>
+          <p>はい、ご利用いただけます。「自立（元気）」や「少し介助が必要」など認定前の状況でも選択できます。認定前の段階から適切な施設の方向性を把握するために役立てていただけます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>診断結果はどのくらい正確ですか？</summary>
+          <p>本ツールは厚生労働省の基準と18万人以上の利用者データをもとに設計されています。重要な決定の際は地域包括支援センター・ケアマネジャーへの相談も合わせてご活用ください。</p>
+        </details>
+        <details class="faq-item">
+          <summary>スマホでも使えますか？</summary>
+          <p>はい、スマートフォン・タブレット・PCすべてに対応しています。アプリのインストールも不要で、ブラウザからすぐにご利用いただけます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>特養の待機期間が長い場合の対策は？</summary>
+          <p>特養は待機者が多く数ヶ月〜2年かかる場合があります。今すぐできる対策として①複数施設（3〜5ヶ所）に同時に待機者登録する②待機期間中は老健やショートステイを活用する③市区町村の地域包括支援センターに優先度の上げ方を相談することをおすすめします。</p>
+        </details>
+      </div>
+      <div class="faq-side">
+        <img src="../assets/photos/photo_20.jpg" alt="介護の相談イメージ">
+        <div class="faq-cta-box">
+          <p>まだ迷っていますか？</p>
+          <p>5問に答えるだけで、専門家レベルの介護施設アドバイスを無料で取得できます。</p>
+          <a href="/elderly-care-advisor/" class="btn-amber" style="display:block;text-align:center;font-size:.9rem;padding:12px 20px">無料で診断する →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer CTA -->
+<section class="ftrcta">
+  <div class="ftrcta-ov"></div>
+  <div class="ftrcta-in">
+    <div class="ftrcta-badge">スマホで可能 | 無料 | 登録不要</div>
+    <h2>まずは無料で試して、<br>親に合った介護の選択肢を見つけよう</h2>
+    <p>5問・約2分で完了。あなたの状況に最適な介護施設タイプと費用を今すぐ確認。</p>
+    <a href="/elderly-care-advisor/" class="btn-amber" style="font-size:1.05rem;padding:17px 48px">無料で診断する →</a>
+    <div class="ftrcta-tags">
+      <span>✓ 登録不要</span>
+      <span>✓ 個人情報収集なし</span>
+      <span>✓ スマホ対応</span>
+      <span>✓ 完全無料</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="ftr">
+  <p>
+    <a href="https://appadaycreator.com/">AppADayCreator</a>
+    <a href="/elderly-care-advisor/">介護施設・費用診断</a>
+    <a href="/elderly-care-advisor/privacy-policy.html">プライバシーポリシー</a>
+  </p>
+  <p style="margin-top:8px">© 2025 AppADayCreator | 株式会社Tech&Brace</p>
+</footer>
+</body>
+</html>
